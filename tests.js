@@ -28,8 +28,28 @@ module.exports = testCase({
             })
         },
         '1B': function(test) {
-
-            test.done();
+            exec("./auto_copy/autoCompletion ./City/Dico/1B < ./City/input/1B.in", function(err, stdout, stderr) {
+                fs.readFile("./output/City/1B.out", function(err, data) {
+                    test.equal(stdout, data);
+                    test.done();
+                });
+            })
+        },
+        '1C': function(test) {
+            exec("./auto_copy/autoCompletion ./City/Dico/1C < ./City/input/1C.in", function(err, stdout, stderr) {
+                fs.readFile("./output/City/1C.out", function(err, data) {
+                    test.equal(stdout, data);
+                    test.done();
+                });
+            })
+        },
+        '1D': function(test) {
+            exec("./auto_copy/autoCompletion ./City/Dico/1D < ./City/input/1D.in", function(err, stdout, stderr) {
+                fs.readFile("./output/City/1D.out", function(err, data) {
+                    test.equal(stdout, data);
+                    test.done();
+                });
+            })
         }
     })
 });
