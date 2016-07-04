@@ -23,10 +23,10 @@ module.exports = testCase({
             exec("./auto_copy/autoCompletion ./City/Dico/1A < ./City/input/1A.in", function(err, stdout, stderr) {
                 fs.readFile("./City/output/1A.out", 'utf-8', function(errfile, data) {
                     var s1 = stdout.split('\n')
-var s2 = data.split('\n')
-for(var i = 0;i < s1.length && i < s2.length;i++){
-    test.equal(s1[i], s2[i]);
-}
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
                     test.done();
                 });
             })
@@ -35,10 +35,10 @@ for(var i = 0;i < s1.length && i < s2.length;i++){
             exec("./auto_copy/autoCompletion ./City/Dico/1B < ./City/input/1B.in", function(err, stdout, stderr) {
                 fs.readFile("./City/output/1B.out", 'utf-8', function(err, data) {
                     var s1 = stdout.split('\n')
-var s2 = data.split('\n')
-for(var i = 0;i < s1.length && i < s2.length;i++){
-    test.equal(s1[i], s2[i]);
-}
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
                     test.done();
                 });
             })
@@ -47,10 +47,10 @@ for(var i = 0;i < s1.length && i < s2.length;i++){
             exec("./auto_copy/autoCompletion ./City/Dico/1C < ./City/input/1C.in", function(err, stdout, stderr) {
                 fs.readFile("./City/output/1C.out", 'utf-8', function(err, data) {
                     var s1 = stdout.split('\n')
-var s2 = data.split('\n')
-for(var i = 0;i < s1.length && i < s2.length;i++){
-    test.equal(s1[i], s2[i]);
-}
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
                     test.done();
                 });
             })
@@ -59,10 +59,10 @@ for(var i = 0;i < s1.length && i < s2.length;i++){
             exec("./auto_copy/autoCompletion ./City/Dico/1D < ./City/input/1D.in", function(err, stdout, stderr) {
                 fs.readFile("./City/output/1D.out", 'utf-8', function(err, data) {
                     var s1 = stdout.split('\n')
-var s2 = data.split('\n')
-for(var i = 0;i < s1.length && i < s2.length;i++){
-    test.equal(s1[i], s2[i]);
-}
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
                     test.done();
                 });
             })
@@ -73,10 +73,10 @@ for(var i = 0;i < s1.length && i < s2.length;i++){
             exec("./auto_copy/autoCompletion ./Sujet/Dico/dico < ./Sujet/input/test2", function(err, stdout, stderr) {
                 fs.readFile("./Sujet/output/test2", 'utf-8', function(errfile, data) {
                     var s1 = stdout.split('\n')
-var s2 = data.split('\n')
-for(var i = 0;i < s1.length && i < s2.length;i++){
-    test.equal(s1[i], s2[i]);
-}
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
                     test.done();
                 });
             })
@@ -85,10 +85,10 @@ for(var i = 0;i < s1.length && i < s2.length;i++){
             exec("./auto_copy/autoCompletion ./Sujet/Dico/dico < ./Sujet/input/test3", function(err, stdout, stderr) {
                 fs.readFile("./Sujet/output/test3", 'utf-8', function(errfile, data) {
                     var s1 = stdout.split('\n')
-var s2 = data.split('\n')
-for(var i = 0;i < s1.length && i < s2.length;i++){
-    test.equal(s1[i], s2[i]);
-}
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
                     test.done();
                 });
             })
@@ -97,10 +97,10 @@ for(var i = 0;i < s1.length && i < s2.length;i++){
             exec("./auto_copy/autoCompletion ./Sujet/Dico/dico < ./Sujet/input/test4", function(err, stdout, stderr) {
                 fs.readFile("./Sujet/output/test4", 'utf-8', function(errfile, data) {
                     var s1 = stdout.split('\n')
-var s2 = data.split('\n')
-for(var i = 0;i < s1.length && i < s2.length;i++){
-    test.equal(s1[i], s2[i]);
-}
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
                     test.done();
                 });
             })
@@ -109,10 +109,10 @@ for(var i = 0;i < s1.length && i < s2.length;i++){
             exec("./auto_copy/autoCompletion ./Sujet/Dico/dico < ./Sujet/input/test5", function(err, stdout, stderr) {
                 fs.readFile("./Sujet/output/test5", 'utf-8', function(errfile, data) {
                     var s1 = stdout.split('\n')
-var s2 = data.split('\n')
-for(var i = 0;i < s1.length && i < s2.length;i++){
-    test.equal(s1[i], s2[i]);
-}
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
                     test.done();
                 });
             })
@@ -121,10 +121,10 @@ for(var i = 0;i < s1.length && i < s2.length;i++){
             exec("./auto_copy/autoCompletion ./Sujet/Dico/dico < ./Sujet/input/test6", function(err, stdout, stderr) {
                 fs.readFile("./Sujet/output/test6", 'utf-8', function(errfile, data) {
                     var s1 = stdout.split('\n')
-var s2 = data.split('\n')
-for(var i = 0;i < s1.length && i < s2.length;i++){
-    test.equal(s1[i], s2[i]);
-}
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
                     test.done();
                 });
             })
@@ -133,10 +133,10 @@ for(var i = 0;i < s1.length && i < s2.length;i++){
             exec("./auto_copy/autoCompletion ./Sujet/Dico/dico < ./Sujet/input/test7", function(err, stdout, stderr) {
                 fs.readFile("./Sujet/output/test7", 'utf-8', function(errfile, data) {
                     var s1 = stdout.split('\n')
-var s2 = data.split('\n')
-for(var i = 0;i < s1.length && i < s2.length;i++){
-    test.equal(s1[i], s2[i]);
-}
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
                     test.done();
                 });
             })
@@ -145,10 +145,10 @@ for(var i = 0;i < s1.length && i < s2.length;i++){
             exec("./auto_copy/autoCompletion ./Sujet/Dico/dico < ./Sujet/input/test8", function(err, stdout, stderr) {
                 fs.readFile("./Sujet/output/test8", 'utf-8', function(errfile, data) {
                     var s1 = stdout.split('\n')
-var s2 = data.split('\n')
-for(var i = 0;i < s1.length && i < s2.length;i++){
-    test.equal(s1[i], s2[i]);
-}
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
                     test.done();
                 });
             })
@@ -157,10 +157,10 @@ for(var i = 0;i < s1.length && i < s2.length;i++){
             exec("./auto_copy/autoCompletion ./Sujet/Dico/dico < ./Sujet/input/test9", function(err, stdout, stderr) {
                 fs.readFile("./Sujet/output/test9", 'utf-8', function(errfile, data) {
                     var s1 = stdout.split('\n')
-var s2 = data.split('\n')
-for(var i = 0;i < s1.length && i < s2.length;i++){
-    test.equal(s1[i], s2[i]);
-}
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
                     test.done();
                 });
             })
