@@ -1,0 +1,6 @@
+{m} {l} {p} {s} {d}
+{PARIS, s} {PARIS, v} {PARIS, d}
+{PARIS, Sa} {PARIS, Si}
+{1 : PARIS, 343 BOULEVARD SAINT-GERMAIN} {2 : PARIS, 458 BOULEVARD SAINT-GERMAIN}
+=> Paris, 458 boulevard Saint-Germain
+

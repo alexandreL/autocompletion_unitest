@@ -1,0 +1,5 @@
+{m} {l} {p} {s} {d}
+{PARIS, s} {PARIS, v} {PARIS, d}
+{1 : PARIS, 34 quai VOLTAIRE} {2 : PARIS, 34 rue VOLTAIRE}
+=> Paris, 34 quai VoLtAiRe
+
