@@ -16,7 +16,7 @@ Solution pour le Dump
 Installation
 ------------
 
-`npm install`
+ * A la racine de autocompletion_unitest:  `npm install`
 
 Utilisation
 -----------
