@@ -22,7 +22,7 @@ module.exports = testCase({
         '1A': function(test) {
             exec("./auto_copy/autoCompletion ./City/Dico/1A < ./City/input/1A.in", function(err, stdout, stderr) {
                 fs.readFile("./output/City/1A.out", function(err, data) {
-                    test.equal(stdout, data, stdout);
+                    test.equal(stdout, data);
                     test.done();
                 });
             })
