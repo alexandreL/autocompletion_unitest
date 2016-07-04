@@ -3,17 +3,24 @@ if [[ $1 ]]
 then
     if [ "./auto_copy" ]
     then
+        echo "clean old project"
         rm -rf auto_copy
     fi
     cp -fR $1 auto_copy
-    if [ -f "node_modules" ]
+    if [ "node_modules" ]
     then
-        echo "Missing node_module:"
-        echo -e "\t\E[1mnpm install\E[0m"
-        exit
+        echo "module Done"
     else
-        ./node_modules/nodeunit/bin/nodeunit tests.js
+        if npm install
+        then
+            echo "good"
+        else
+            echo "Impossible npm"
+            exit
+        fi
     fi
+    ./node_modules/nodeunit/bin/nodeunit tests.js
+
 else
     echo -e "./test \E[1mpath_to_project_folder\E[0m"
 fi
