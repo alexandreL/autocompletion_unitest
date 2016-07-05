@@ -2,9 +2,9 @@ var testCase = require('nodeunit').testCase;
 var exec = require('child_process').exec;
 var fs = require('fs');
 var execParam = {
-  encoding: 'utf8',
-  timeout: 10000,
-  killSignal: 'SIGTERM',
+    encoding: 'utf8',
+    timeout: 10000,
+    killSignal: 'SIGTERM',
 }
 
 module.exports = testCase({
@@ -22,7 +22,7 @@ module.exports = testCase({
             })
         }
     }),
-    'City': testCase({
+    'City Simple': testCase({
         '1A': function(test) {
             exec("./auto_copy/autoCompletion ./City/Dico/1A < ./City/input/1A.in", execParam, function(err, stdout, stderr) {
                 fs.readFile("./City/output/1A.out", 'utf-8', function(errfile, data) {
@@ -62,6 +62,20 @@ module.exports = testCase({
         '1D': function(test) {
             exec("./auto_copy/autoCompletion ./City/Dico/1D < ./City/input/1D.in", execParam, function(err, stdout, stderr) {
                 fs.readFile("./City/output/1D.out", 'utf-8', function(err, data) {
+                    var s1 = stdout.split('\n')
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
+                    test.done();
+                });
+            })
+        }
+    }),
+    'City hard': testCase({
+        '1E': function(test) {
+            exec("./auto_copy/autoCompletion ./City/Dico/1E < ./City/input/1E.in", execParam, function(err, stdout, stderr) {
+                fs.readFile("./City/output/1E.out", 'utf-8', function(err, data) {
                     var s1 = stdout.split('\n')
                     var s2 = data.split('\n')
                     for (var i = 0; i < s1.length && i < s2.length; i++) {
