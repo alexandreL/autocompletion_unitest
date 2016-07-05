@@ -112,6 +112,20 @@ module.exports = testCase({
             })
         }
     }),
+    'General Adress': testCase({
+        '4A': function(test) {
+            exec("./auto_copy/autoCompletion ./City/Dico/4A < ./City/input/4A.in", execParam, function(err, stdout, stderr) {
+                fs.readFile("./City/output/4A.out", 'utf-8', function(err, data) {
+                    var s1 = stdout.split('\n')
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
+                    test.done();
+                });
+            })
+        }
+    }),
     'TestSujet': testCase({
         'test2': function(test) {
             exec("./auto_copy/autoCompletion ./Sujet/Dico/dico < ./Sujet/input/test2", execParam, function(err, stdout, stderr) {
