@@ -72,10 +72,24 @@ module.exports = testCase({
             })
         }
     }),
+    'City normal': testCase({
+        '2A': function(test) {
+            exec("./auto_copy/autoCompletion ./City/Dico/2A < ./City/input/2A.in", execParam, function(err, stdout, stderr) {
+                fs.readFile("./City/output/2A.out", 'utf-8', function(err, data) {
+                    var s1 = stdout.split('\n')
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
+                    test.done();
+                });
+            })
+        }
+    }),
     'City hard': testCase({
-        '1E': function(test) {
-            exec("./auto_copy/autoCompletion ./City/Dico/1E < ./City/input/1E.in", execParam, function(err, stdout, stderr) {
-                fs.readFile("./City/output/1E.out", 'utf-8', function(err, data) {
+        '3A': function(test) {
+            exec("./auto_copy/autoCompletion ./City/Dico/3A < ./City/input/3A.in", execParam, function(err, stdout, stderr) {
+                fs.readFile("./City/output/3A.out", 'utf-8', function(err, data) {
                     var s1 = stdout.split('\n')
                     var s2 = data.split('\n')
                     for (var i = 0; i < s1.length && i < s2.length; i++) {
@@ -85,9 +99,9 @@ module.exports = testCase({
                 });
             })
         },
-        '1F': function(test) {
-            exec("./auto_copy/autoCompletion ./City/Dico/1F < ./City/input/1F.in", execParam, function(err, stdout, stderr) {
-                fs.readFile("./City/output/1F.out", 'utf-8', function(err, data) {
+        '3B': function(test) {
+            exec("./auto_copy/autoCompletion ./City/Dico/3B < ./City/input/3B.in", execParam, function(err, stdout, stderr) {
+                fs.readFile("./City/output/3B.out", 'utf-8', function(err, data) {
                     var s1 = stdout.split('\n')
                     var s2 = data.split('\n')
                     for (var i = 0; i < s1.length && i < s2.length; i++) {
