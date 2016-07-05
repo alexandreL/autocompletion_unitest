@@ -23,6 +23,8 @@ Utilisation
 
  `./test_autocompletion.sh path_to_project_folder`
 
+ * /!\ Ne JAMAIS faire de CTRL + C sinon y'a des zombies /!\
+
 Exemple
 -------
 
