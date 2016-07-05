@@ -12,7 +12,7 @@ module.exports = testCase({
         'base': function(test) {
             exec("make -C ./auto_copy/", execParam, function(err, stdout, stderr) {
                 if (stderr.length !== 0) {
-                    sys.print(stderr);
+                    console.log(stderr);
                     test.ok(false);
                     test.done();
                 } else {
