@@ -84,7 +84,20 @@ module.exports = testCase({
                     test.done();
                 });
             })
+        },
+        'Big': function(test) {
+            exec("./auto_copy/autoCompletion ./City/Dico/Big < ./City/input/Big.in", execParam, function(err, stdout, stderr) {
+                fs.readFile("./City/output/Big.out", 'utf-8', function(err, data) {
+                    var s1 = stdout.split('\n')
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
+                    test.done();
+                });
+            })
         }
+
     }),
     'City hard': testCase({
         '3A': function(test) {
