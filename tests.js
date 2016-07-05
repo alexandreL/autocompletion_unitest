@@ -84,6 +84,18 @@ module.exports = testCase({
                     test.done();
                 });
             })
+        },
+        '1F': function(test) {
+            exec("./auto_copy/autoCompletion ./City/Dico/1F < ./City/input/1F.in", execParam, function(err, stdout, stderr) {
+                fs.readFile("./City/output/1F.out", 'utf-8', function(err, data) {
+                    var s1 = stdout.split('\n')
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i]);
+                    }
+                    test.done();
+                });
+            })
         }
     }),
     'TestSujet': testCase({
