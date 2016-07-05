@@ -27,3 +27,9 @@ Exemple
 -------
 
 `./test_autocompletion.sh ~/Piscine_de_m/autoCompletion`
+
+Sortie
+------
+
+ * erreur : AssertionError: [votre output] == [output moulinette]
+`AssertionError: '{b} {p} ' == '{b} {p}'`
