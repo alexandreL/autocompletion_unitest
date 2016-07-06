@@ -35,6 +35,18 @@ module.exports = testCase({
                 });
             })
         },
+        'droit': function(test) {
+            exec("./auto_copy/autoCompletion ./City/Dico/droit < ./City/input/droit.in", execParam, function(err, stdout, stderr) {
+                fs.readFile("./City/output/droit.out", 'utf-8', function(errfile, data) {
+                    var s1 = stdout.split('\n')
+                    var s2 = data.split('\n')
+                    for (var i = 0; i < s1.length && i < s2.length; i++) {
+                        test.equal(s1[i], s2[i], 'si 1A passe c\'est que vous cassez sur les droit de fichier en read-Only');
+                    }
+                    test.done();
+                });
+            })
+        },
         '1B': function(test) {
             exec("./auto_copy/autoCompletion ./City/Dico/1B < ./City/input/1B.in", execParam, function(err, stdout, stderr) {
                 fs.readFile("./City/output/1B.out", 'utf-8', function(err, data) {
